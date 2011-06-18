@@ -1,0 +1,14 @@
+Options -Indexes
+
+<FilesMatch "\.(htaccess|sh)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+<files config.php>
+    Order Allow,Deny
+    Deny from All
+</files>
+
+php_flag   display_errors       Off
+

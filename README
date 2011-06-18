@@ -1,0 +1,54 @@
+This tool captures first frame of an swf file. The capturing is done in php on
+the server side using  dump-dgnash tool.
+To capture following tools have been tried and the best one turned out to be
+dump-gnash.
+1. swftools ( http://swftools.org/ ) (screenshots are not accurate)
+2. swfdef ( http://swfdec.freedesktop.org/wiki/ ) (aspect ratio not maintained,
+always square screenshot is generated)
+3. gnash ( http://www.gnu.org/s/gnash/) (screenshots are acurate and the aspect
+ratio is maintained)
+
+Installation:-
+------------
+This can only be deployed on linux.
+The pre requisite for this to run is install gnash on the deployment server.
+Follow below instructions to deploy this on the server.
+1. Rename default_config.php to config.php and follow the instructions specified
+after the "Editable Configuration" section in config.php file.
+2. Rename htaccess to .htaccess
+3. Deployment is ready to use.
+
+Security:-
+----------
+There is a possibility of deployment server being used as an attacker of the
+server hosting swf files.To avoid this, use fail2ban as it is better handled
+using that instead of inside php script.
+
+TODO:-
+------
+* fix virtual() errors , check if it is only issue with ubuntu.. if so ignore
+* Write a build script.
+* Asynchronous handling of swf download
+    ** Show progress
+* Add cancel/abort support.
+* Download swf partially, which is just enough to create the screen shot.
+* Create install script.
+    ** include production level php configuration such as displayerros off etc.
+* Improve look and feel.
+* Handle md5 clashes
+* Implement intelligent/http caching for caching of swf files
+* Write a script to cleanup cache, add this to the cron.
+* Limit max execution time for curl
+* Get http_referer value from config and set it while sending curl requests
+* Test various scenarios
+
+References:-
+------------
+http://wiki.swftools.org/index.php/FAQ
+http://cblfs.cross-lfs.org/index.php/Swfdec
+http://www.maxdesign.com.au/articles/center/
+http://techblog.floorplanner.com/2010/11/02/server-side-rendering-of-swf-images-using-gnash/
+http://askubuntu.com/questions/16867/missing-thumbnails-for-swf-files-in-nautilus
+http://ftp.gnu.org/pub/gnu/gnash/0.8.8/
+http://the-labs.com/MacromediaFlash/SWF-Spec/SWFfileformat.html
+http://en.wikipedia.org/wiki/SWF

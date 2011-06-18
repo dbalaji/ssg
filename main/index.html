@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Screenshot generator for swf files</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="all" />
+
+	<!--[if IE 7]><link rel="stylesheet" href="http://www.maxdesign.com.au/wp-content/themes/maxdesign/style-ie7.css" type="text/css" media="screen" /><![endif]-->
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    
+    <script type="text/javascript" async="" src="js/main.js"></script>
+
+</head>
+
+<body>
+
+<div id="container">
+
+    <div id="header_container">
+        <a title="SSS Home" href="#" id="siteLogo">
+            <img width="300" height="60" alt="Swf Screenshot Generator"
+            src="img/logo.png"  style="border:none" />
+        </a>
+        <div id="navigation_container">
+            <ul>
+                <li>
+                    <a title="Source" href="https://github.com/dbalaji/ssg" id="link_source">Source Code</a>
+                </li>
+                <li>
+                    <a title="About" href="http://balaji.me/" id="link_about">About Author</a>
+                </li>
+            </ul>
+        </div>
+    </div> <!-- header_container-->
+    <hr />
+    <div id="content_container">
+        <div id="form_container">
+        <form id="main_form">
+            <label for="url" id="url_label">URL:</label>
+            <input type="text" name="url" value="" id="swfurl_textfield" />
+            <input type="submit" name="generate" value="Generate" id="generate_button" />
+        </form>
+        </div>
+        <hr />
+        <div id="message" style="display:none">
+            This is some sample message
+        </div>
+        <div id="content">
+            <img src="" alt="Swf screen shot..." id="screenshot" style="display:none" />
+            <img src="img/loading.gif" id="loader" style="display:none" />
+        </div>
+    </div> <!-- content_container-->
+
+    <div id="footer_container">
+        <!-- Add copyright statement here. :) -->
+    </div>
+
+</div> <!-- container-->
+
+</body>
+
+</html>

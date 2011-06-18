@@ -1,0 +1,14 @@
+
+    
+    Download swf  -- failed?--> Ask the user to correct the url
+            |
+        success?
+            |
+            V
+    Execute swf screencapture command  --failed?--> Show error message to the user
+            |
+        success?
+            |
+            V
+        Show screenshot to the user
+
