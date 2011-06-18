@@ -1,3 +1,4 @@
+This can only be deployed on linux.
 This tool captures first frame of an swf file. The capturing is done in php on
 the server side using  dump-dgnash tool.
 To capture following tools have been tried and the best one turned out to be
@@ -8,16 +9,6 @@ always square screenshot is generated)
 3. gnash ( http://www.gnu.org/s/gnash/) (screenshots are acurate and the aspect
 ratio is maintained)
 
-Installation:-
-------------
-This can only be deployed on linux.
-The pre requisite for this to run is install gnash on the deployment server.
-Follow below instructions to deploy this on the server.
-1. Rename default_config.php to config.php and follow the instructions specified
-after the "Editable Configuration" section in config.php file.
-2. Rename htaccess to .htaccess
-3. Deployment is ready to use.
-
 Security:-
 ----------
 There is a possibility of deployment server being used as an attacker of the
@@ -27,13 +18,13 @@ using that instead of inside php script.
 TODO:-
 ------
 * fix virtual() errors , check if it is only issue with ubuntu.. if so ignore
-* Write a build script.
+* Write a build script. (for now tar -hcvzf is enough, which dereferences the
+symbolic links and creates an archive)
 * Asynchronous handling of swf download
     ** Show progress
 * Add cancel/abort support.
 * Download swf partially, which is just enough to create the screen shot.
 * Create install script.
-    ** include production level php configuration such as displayerros off etc.
 * Improve look and feel.
 * Handle md5 clashes
 * Implement intelligent/http caching for caching of swf files
@@ -52,3 +43,4 @@ http://askubuntu.com/questions/16867/missing-thumbnails-for-swf-files-in-nautilu
 http://ftp.gnu.org/pub/gnu/gnash/0.8.8/
 http://the-labs.com/MacromediaFlash/SWF-Spec/SWFfileformat.html
 http://en.wikipedia.org/wiki/SWF
+http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html

@@ -16,8 +16,8 @@ class FrameCapture
                                     $destFilePath);
         $cmd= $this->_shellScriptPath ." ". implode(" ", $shellScriptArgs); 
         
-        //TODO: replace this with exec or some better one
-        system($cmd);
+        //TODO: Add checks for image file validity 
+        exec($cmd);
     }
 }
 ?>

@@ -1,0 +1,11 @@
+The pre requisite is to install. Refer below links to install gnash
+-> http://ftp.gnu.org/pub/gnu/gnash/0.8.8/
+-> http://techblog.floorplanner.com/2010/11/02/server-side-rendering-of-swf-images-using-gnash/
+-> http://askubuntu.com/questions/16867/missing-thumbnails-for-swf-files-in-nautilus
+
+After installing gnash, follow below instructions to deploy the tool on the server.
+1. Rename default_config.php to config.php and follow the instructions specified
+after the "Editable Configuration" section in config.php file.
+2. Rename htaccess to .htaccess
+
+Open deployment web location, and start using the tool.
