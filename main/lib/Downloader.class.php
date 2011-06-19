@@ -1,5 +1,6 @@
 <?php
 require_once(dirname(__FILE__) ."/errordefs.php");
+define("DL_MAX_REDIRECTS", 5);
 class Downloader
 {
     private $_uid;
@@ -42,6 +43,10 @@ class Downloader
 
             try {
                 curl_setopt($ch, CURLOPT_URL, $this->_url);
+                curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+                curl_setopt($ch, CURLOPT_MAXREDIRS, DL_MAX_REDIRECTS);
+                //set useragent same as what the client sends
+                curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
                 curl_setopt($ch, CURLOPT_FILE, $fp);
                 if (curl_exec($ch) === FALSE){
                     throw new Exception(curl_error($ch), ERR_DL_CURL_ERROR);
