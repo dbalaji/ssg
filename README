@@ -1,6 +1,6 @@
 This can only be deployed on linux.
 This tool captures first frame of an swf file. The capturing is done in php on
-the server side using  dump-dgnash tool.
+the server side using  dump-gnash tool.
 To capture following tools have been tried and the best one turned out to be
 dump-gnash.
 1. swftools ( http://swftools.org/ ) (screenshots are not accurate)

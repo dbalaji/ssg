@@ -14,6 +14,6 @@
 
 raw=$(mktemp)
 $1 $2 -D $raw --max-advances $3 -j 500 -k 500 >> /dev/null 2>&1
-tail -c 1MB $raw | convert -size 500x500 -depth 8 rgba:- \
+tail -c1000k $raw | convert -size 500x500 -depth 8 rgba:- \
 -separate -swap 0,2 -combine -trim png:$4  >> /dev/null 2>&1
 trap "rm $raw" EXIT
